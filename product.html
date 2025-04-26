@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Balm</title>
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <div class="logo">Balm</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="termsServices.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="slider-section">
+    <h2>Featured Dishes</h2>
+    <div class="slider">
+      <div class="slide"><img src="images/slide1.jpg" alt="Dish 1" /></div>
+      <div class="slide"><img src="images/slide1.jpg" alt="Dish 2" /></div>
+      <div class="slide"><img src="images/slide3.jpg" alt="Dish 3" /></div>
+      <div class="slide"><img src="images/slide3.jpg" alt="Dish 4" /></div>
+    </div>
+  </section>
+
+  <section class="product-listing">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <!-- Repeat this block for more products -->
+      <div class="product-card">
+        <img src="images/product1.jpeg" alt="Biryani" />
+        <h3>Mixture</h3>
+        <p>A crunchy chaos you’ll crave!</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="Paneer Tikka" />
+        <h3>Eillu Urandai</h3>
+        <p>Tiny treats, mighty nutrition</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product3.jpg" alt="Naan" />
+        <h3>Banana Chips</h3>
+        <p>Crispy, golden, and addictive.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product4.jpg" alt="Biryani" />
+        <h3>Gilabi</h3>
+        <p>Swirls of sweetness in every bite.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product5.jpg" alt="Paneer Tikka" />
+        <h3>Gulab Jamun</h3>
+        <p>Soft, syrupy, soul-satisfying</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product6.jpg" alt="Naan" />
+        <h3>Rava ladoo</h3>
+        <p>Classic delight in a perfect round.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product7.jpg" alt="Naan" />
+        <h3>Thean Mittai</h3>
+        <p>Sweet nostalgia in bright red.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product8.jpg" alt="Biryani" />
+        <h3>Bajji</h3>
+        <p>Hot, spicy, street-side magic</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product9.jpg" alt="Paneer Tikka" />
+        <h3>Groundnut Barfi</h3>
+        <p>Nutty, rich, and unforgettable.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/product10.jpg" alt="Naan" />
+        <h3>Kai Murukku</h3>
+        <p>Twist, crunch, repeat!</p>
+      </div>
+      <!-- Add more product-card divs as needed -->
+    </div>
+  </section>
+
+  <script>
+    const slider = document.querySelector('.slider');
+    let scrollAmount = 0;
+  
+    function autoSlide() {
+      const slideWidth = slider.querySelector('.slide').offsetWidth + 16; // 16px gap
+      scrollAmount += slideWidth;
+  
+      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0; // reset scroll
+      }
+  
+      slider.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  
+    setInterval(autoSlide, 2000);
+  </script>
+  
+</body>
+</html>
